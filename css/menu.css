@@ -1,0 +1,46 @@
+ul#menu{
+	margin:0;list-style:none;padding:0;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;font-size:0;z-index:999;position:relative;display:inline-block;zoom:1;
+	*display:inline;}
+ul#menu li{
+	display:block;white-space:nowrap;font-size:0;float:left;}
+* html ul#menu li a{
+	display:inline-block;}
+ul#menu>li{
+	margin:0; background:url(../images/divider.png) no-repeat left center;}
+	ul#menu>li:first-child{
+	background:none;}
+ul#menu a:active, ul#menu a:focus{
+	outline-style:none;}
+ul#menu a{
+	display:block;vertical-align:middle;text-align:left;text-decoration:none;font:14px Arial, Helvetica, sans-serif;color:#4496d2; cursor:pointer;padding:22px 65px;text-transform:uppercase; font-weight:bold; color:#00609d;}
+ul#menu li:hover>a{
+	color:#000;text-decoration:none;}
+ul#menu > label.switch{
+	display:none;cursor:pointer;width:25px;height:20px;padding:10px;}
+ul#menu > label.switch:before{
+	content:"";position:absolute;display:block;height:4px;width:25px;border-radius:4px;background:#000000;-moz-box-shadow:0 8px #000000, 0 16px #000000;-webkit-box-shadow:0 8px #000000, 0 16px #000000;box-shadow:0 8px #000000, 0 16px #000000;}
+ul#menu > label.switch:hover:before{
+	background:#000000;-moz-box-shadow:0 8px #000000, 0 16px #000000;-webkit-box-shadow:0 8px #000000, 0 16px #000000;box-shadow:0 8px #000000, 0 16px #000000;}
+ul#menu > .switchbox{
+	display:none;}
+ul#menu li.topfirst>a{
+	border-radius:5px 0 0 5px;-moz-border-radius:5px 0 0 5px;-webkit-border-radius:5px;-webkit-border-top-right-radius:0;-webkit-border-bottom-right-radius:0;}
+ul#menu li.toplast>a{
+	border-radius:0 5px 5px 0;-moz-border-radius:0 5px 5px 0;-webkit-border-radius:0;-webkit-border-top-right-radius:5px;-webkit-border-bottom-right-radius:5px;}
+@media screen and (max-width: 768px) {
+	ul#menu > li {
+		position: initial;}
+	ul#menu ul .submenu,ul#menu li > ul {
+		left: 0; right:auto; top: 100%;}
+	ul#menu .submenu,ul#menu ul,ul#menu .column {
+		-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;padding-right: 0;width: 100% !important;}
+}
+@media screen and (max-width: 192px) {
+	ul#menu {
+		width: 100%;}
+	ul#menu > li {
+		display: none !important;		position: relative;		width: 100% !important;}
+	ul#menu > label.switch,ul#menu .switchbox:checked ~ li {
+		display: block !important;}
+}
+ul#menu li .current{background-color:#ff6e00;border-radius:5px 0 0 5px;-moz-border-radius:5px 0 0 5px;-webkit-border-radius:5px;-webkit-border-top-right-radius:0;-webkit-border-bottom-right-radius:0;}
